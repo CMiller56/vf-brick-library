@@ -1,2 +1,100 @@
-# vf-brick-library
-Public library of portable knowledge bricks made with VectorForge Pro. Feedback welcome. knowledge-base, rag, vectorforge, local-llm, air-gap, technical-documentation
+# VectorForge Brick Library
+
+Public collection of **portable knowledge bricks** — bounded, self-contained packages of technical knowledge made with [VectorForge Pro](https://x.com/VectorForgePro).
+
+These are not unbounded RAG dumps.  
+Each brick is a finished, handoffable unit: rich Markdown + machine sidecars + embeddings + craft notes, ready for local use, air-gapped environments, or any tool that can read the package.
+
+---
+
+## What is a knowledge brick?
+
+A **knowledge brick** is a portable, versionable unit of technical knowledge designed to stay honest and usable over time.
+
+Typical contents:
+- Primary rich Markdown (human-readable source of truth)
+- `kb.json` + chunk indexes
+- Embeddings + provenance
+- Craft brief (what the brick is for, known limits, answer policy)
+- Quality / deficiency notes (we surface problems instead of hiding them)
+- Handoff / original source companions where useful
+
+Bricks are sized to stay human-scale (roughly 500–3k chunks design target). Bigger topics are composed from multiple bricks, not one giant pile.
+
+---
+
+## What’s in this library
+
+| Brick | Description | Status |
+|-------|-------------|--------|
+| *Coming first wave* | ArduPilot / CubePilot family facets | Preparing |
+
+First portable ZIPs will land here shortly. Each brick ships as a single `*_portable.zip` drop-in package plus a short library card.
+
+---
+
+## How to use a brick
+
+1. Download the `*_portable.zip`
+2. Unzip
+3. Point your tool of choice at it (VF Runtime Connect, any local RAG stack, plain Markdown reader, etc.)
+4. Read the included craft brief / HANDOFF notes first — they tell you what the brick is good for and where it is intentionally limited
+
+No account required. No cloud dependency.
+
+---
+
+## Feedback wanted
+
+This library exists to get real-world feedback, not just stars.
+
+I especially want to hear:
+- Did the brick load and retrieve cleanly in your setup?
+- What felt missing, unclear, or over-engineered?
+- Where did the extraction honesty (quality notes, figure-shell handling, dual-stream flags, etc.) help — or get in the way?
+- Would you actually keep and maintain a brick like this?
+
+Open an [Issue](../../issues) with the brick name in the title, or just reply on X: [@VectorForgePro](https://x.com/VectorForgePro)
+
+Honest criticism is more useful than polite praise.
+
+---
+
+## Design stance (short version)
+
+- **Problems stay visible.** We do not silently invent fixes for content we did not create.
+- **Extraction limits are expected.** Real PDFs, manuals, and decks have hollow pages, dual-stream debris, and figure shells. The brick records them.
+- **Local-first and air-gap capable.** The package should work without phoning home.
+- **Non-data-scientists should be able to manufacture and maintain these.** That is the whole point of the workbench.
+
+More detail lives in the VectorForge features & intentional craft docs (coming to the library as bricks themselves).
+
+---
+
+## Repo layout
+
+```
+vf-brick-library/
+├── README.md                 ← you are here
+├── bricks/
+│   ├── <Brick_Name>/
+│   │   ├── <Brick_Name>_portable.zip
+│   │   └── LIBRARY_CARD.md
+│   └── ...
+└── feedback/                 ← optional templates / notes
+```
+
+---
+
+## About VectorForge Pro
+
+VectorForge Pro is a local-first timeline-native workbench for turning heterogeneous source material (PDFs, Word, PowerPoint, HTML, spreadsheets, manuals…) into high-quality knowledge bricks.
+
+It treats knowledge bases like long-form media projects: non-destructive editing, quality orchestration, craft briefs, and honest extract loops instead of green-smoke-on-empty-books.
+
+- X: [@VectorForgePro](https://x.com/VectorForgePro)
+- Builder: [@CMiller111111](https://x.com/CMiller111111)
+
+---
+
+*Built for operators who treat knowledge bases as living products rather than one-time uploads.*
