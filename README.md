@@ -2,6 +2,8 @@
 
 Public collection of **portable knowledge bricks** — bounded, self-contained packages of technical knowledge made with [VectorForge Pro](https://x.com/VectorForgePro).
 
+**Why these bricks exist:** we publish KBs that **demonstrate the range of VF Pro capabilities** — different source shapes (technical PDF papers, multi-site wiki/HTML ops docs, large parameter references, protocol XML, GitBook-style hardware manuals) turned into honest, drop-in packages. The library is a living sample set, not a product dump of the workbench itself.
+
 These are not unbounded RAG dumps.  
 Each brick is a finished, handoffable unit: rich Markdown + machine sidecars + embeddings + craft notes, ready for local use, air-gapped environments, or any tool that can read the package.
 
@@ -101,6 +103,8 @@ vf-brick-library/
 VectorForge Pro is a local-first timeline-native workbench for turning heterogeneous source material (PDFs, Word, PowerPoint, HTML, spreadsheets, manuals…) into high-quality knowledge bricks.
 
 It treats knowledge bases like long-form media projects: non-destructive editing, quality orchestration, craft briefs, and honest extract loops instead of green-smoke-on-empty-books.
+
+**This repository is the public gallery of outputs** — bricks that show what the factory can produce across domains and file types. It is not the Pro application, Engine source, or internal product documentation.
 
 - X: [@VectorForgePro](https://x.com/VectorForgePro)
 - Builder: [@CMiller111111](https://x.com/CMiller111111)
