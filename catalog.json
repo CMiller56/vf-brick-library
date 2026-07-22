@@ -1,8 +1,16 @@
 {
   "version": 1,
-  "updated": "2026-07-21",
+  "updated": "2026-07-22",
   "library": "vf-brick-library",
   "bricks": [
+    {
+      "name": "Advanced_Rockets",
+      "title": "Advanced Rocket Engines (Haidn / RTO-EN-AVT-150)",
+      "zip": "bricks/Advanced_Rockets/Advanced_Rockets_portable.zip",
+      "card": "bricks/Advanced_Rockets/LIBRARY_CARD.md",
+      "size_bytes": 1495393,
+      "family": "aerospace"
+    },
     {
       "name": "ArduPilot_MAVLink",
       "title": "MAVLink (ArduPilot-oriented)",
