@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "updated": "2026-07-21",
+  "library": "vf-brick-library",
+  "bricks": [
+    {
+      "name": "ArduPilot_MAVLink",
+      "title": "MAVLink (ArduPilot-oriented)",
+      "zip": "bricks/ArduPilot_MAVLink/ArduPilot_MAVLink_portable.zip",
+      "card": "bricks/ArduPilot_MAVLink/LIBRARY_CARD.md",
+      "size_bytes": 1243981,
+      "family": "ardupilot"
+    },
+    {
+      "name": "ArduPilot_MissionPlanner",
+      "title": "Mission Planner (GCS)",
+      "zip": "bricks/ArduPilot_MissionPlanner/ArduPilot_MissionPlanner_portable.zip",
+      "card": "bricks/ArduPilot_MissionPlanner/LIBRARY_CARD.md",
+      "size_bytes": 819318,
+      "family": "ardupilot"
+    },
+    {
+      "name": "ArduPilot_Plane",
+      "title": "ArduPilot Plane (operations)",
+      "zip": "bricks/ArduPilot_Plane/ArduPilot_Plane_portable.zip",
+      "card": "bricks/ArduPilot_Plane/LIBRARY_CARD.md",
+      "size_bytes": 1507497,
+      "family": "ardupilot"
+    },
+    {
+      "name": "ArduPilot_Plane_Params",
+      "title": "ArduPilot Plane Parameters",
+      "zip": "bricks/ArduPilot_Plane_Params/ArduPilot_Plane_Params_portable.zip",
+      "card": "bricks/ArduPilot_Plane_Params/LIBRARY_CARD.md",
+      "size_bytes": 6158721,
+      "family": "ardupilot"
+    },
+    {
+      "name": "CubePilot_FC",
+      "title": "CubePilot flight controllers",
+      "zip": "bricks/CubePilot_FC/CubePilot_FC_portable.zip",
+      "card": "bricks/CubePilot_FC/LIBRARY_CARD.md",
+      "size_bytes": 1103397,
+      "family": "ardupilot"
+    },
+    {
+      "name": "DroneCAN",
+      "title": "DroneCAN",
+      "zip": "bricks/DroneCAN/DroneCAN_portable.zip",
+      "card": "bricks/DroneCAN/LIBRARY_CARD.md",
+      "size_bytes": 798343,
+      "family": "ardupilot"
+    },
+    {
+      "name": "UAVCAN_cvra",
+      "title": "UAVCAN (CVRA / legacy facet)",
+      "zip": "bricks/UAVCAN_cvra/UAVCAN_cvra_portable.zip",
+      "card": "bricks/UAVCAN_cvra/LIBRARY_CARD.md",
+      "size_bytes": 214548,
+      "family": "ardupilot"
+    }
+  ]
+}

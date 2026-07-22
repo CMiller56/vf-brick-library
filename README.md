@@ -27,9 +27,19 @@ Bricks are sized to stay human-scale (roughly 500–3k chunks design target). Bi
 
 | Brick | Description | Status |
 |-------|-------------|--------|
-| *Coming first wave* | ArduPilot / CubePilot family facets | Preparing |
+| [ArduPilot_Plane](bricks/ArduPilot_Plane/) | Plane operations / wiki-oriented facet | **v1 portable ZIP** |
+| [ArduPilot_Plane_Params](bricks/ArduPilot_Plane_Params/) | Plane parameters reference facet | **v1 portable ZIP** |
+| [ArduPilot_MAVLink](bricks/ArduPilot_MAVLink/) | MAVLink protocol facet | **v1 portable ZIP** |
+| [ArduPilot_MissionPlanner](bricks/ArduPilot_MissionPlanner/) | Mission Planner GCS facet | **v1 portable ZIP** |
+| [CubePilot_FC](bricks/CubePilot_FC/) | CubePilot / Cube hardware docs | **v1 portable ZIP** |
+| [DroneCAN](bricks/DroneCAN/) | DroneCAN protocol | **v1 portable ZIP** |
+| [UAVCAN_cvra](bricks/UAVCAN_cvra/) | UAVCAN / CVRA-oriented facet | **v1 portable ZIP** |
 
-First portable ZIPs will land here shortly. Each brick ships as a single `*_portable.zip` drop-in package plus a short library card.
+Each brick folder has `*_portable.zip` + `LIBRARY_CARD.md` (purpose, rights, residual notes, load tips). Machine index: [`catalog.json`](catalog.json).
+
+**Not affiliated with or endorsed by** the ArduPilot, CubePilot, DroneCAN, or UAVCAN projects. Source documentation remains under **upstream licenses** — see each card. These packs are derived retrieval bricks for tinkerers and integrators.
+
+
 
 ---
 
@@ -67,7 +77,7 @@ Honest criticism is more useful than polite praise.
 - **Local-first and air-gap capable.** The package should work without phoning home.
 - **Non-data-scientists should be able to manufacture and maintain these.** That is the whole point of the workbench.
 
-More detail lives in the VectorForge features & intentional craft docs (coming to the library as bricks themselves).
+More detail lives in VectorForge product docs; VF documentation bricks may be added to this library in a later wave.
 
 ---
 
