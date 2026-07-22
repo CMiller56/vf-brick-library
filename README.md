@@ -39,7 +39,7 @@ Each brick folder has `*_portable.zip` + `LIBRARY_CARD.md` (purpose, rights, res
 
 **Not affiliated with or endorsed by** the ArduPilot, CubePilot, DroneCAN, or UAVCAN projects. Source documentation remains under **upstream licenses** — see each card. These packs are derived retrieval bricks for tinkerers and integrators.
 
-
+This first wave uses only external / open technical sources. Nothing proprietary or unscreened is published here.
 
 ---
 
@@ -47,7 +47,7 @@ Each brick folder has `*_portable.zip` + `LIBRARY_CARD.md` (purpose, rights, res
 
 1. Download the `*_portable.zip`
 2. Unzip
-3. Point your tool of choice at it (VF Runtime Connect, any local RAG stack, plain Markdown reader, etc.)
+3. Point your tool of choice at it (any local RAG stack, plain Markdown reader, VF Runtime Connect if you have it, etc.)
 4. Read the included craft brief / HANDOFF notes first — they tell you what the brick is good for and where it is intentionally limited
 
 No account required. No cloud dependency.
@@ -77,8 +77,6 @@ Honest criticism is more useful than polite praise.
 - **Local-first and air-gap capable.** The package should work without phoning home.
 - **Non-data-scientists should be able to manufacture and maintain these.** That is the whole point of the workbench.
 
-More detail lives in VectorForge product docs; VF documentation bricks may be added to this library in a later wave.
-
 ---
 
 ## Repo layout
@@ -86,12 +84,13 @@ More detail lives in VectorForge product docs; VF documentation bricks may be ad
 ```
 vf-brick-library/
 ├── README.md                 ← you are here
+├── catalog.json              ← machine-readable index
 ├── bricks/
 │   ├── <Brick_Name>/
 │   │   ├── <Brick_Name>_portable.zip
 │   │   └── LIBRARY_CARD.md
 │   └── ...
-└── feedback/                 ← optional templates / notes
+└── (optional feedback notes)
 ```
 
 ---
