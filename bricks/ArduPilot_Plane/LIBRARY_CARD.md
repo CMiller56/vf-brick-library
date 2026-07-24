@@ -1,45 +1,60 @@
 # ArduPilot Plane (operations)
 
-**Brick id (folder):** `ArduPilot_Plane`  
+**Brick id:** `ArduPilot_Plane`  
 **Chunks:** 335  
-**Package:** `ArduPilot_Plane_portable.zip` (1472 KB)  
-**Export gate waived:** True
+**Package:** `ArduPilot_Plane_portable.zip` (~1472 KB)
 
 ## Purpose
 
-Flight operations / Plane wiki-oriented knowledge for fixed-wing ArduPilot.
+Flight operations / Plane wiki-oriented knowledge for fixed-wing ArduPilot (modes, setup, failsafes, missions, landing — not the full parameter encyclopedia).
 
 ## Audience
 
-ArduPilot tinkerers, GCS users, integrators.
+ArduPilot tinkerers, GCS users, restricted-environment integrators who need offline ops reference.
 
-## Sources
+## Snapshot (critical for this domain)
 
-ArduPilot public documentation (wiki / docs exports). Not affiliated with ArduPilot project.
+Corpus packaged **2026-07-18** from a local mirror of ArduPilot Plane–style documentation (wiki/HTML → structured MD). **Not pinned to a single Plane firmware tag** — parameter numbers and mode behavior can differ by release; verify critical values against the docs for *your* Plane version.
+
+## Export / quality gate (what “waived” meant)
+
+At export, Job C reported **soft residual craft debt** (non-blocking). That is a manufacturing residual flag, not a claim that the brick is flight-certified. Soft items were not high-priority open defects at last recheck; the brick shipped for public feedback anyway.
+
+Internal Job C soft-gate language is **not** a silent pass. If a card previously said only `Export gate waived: True` without explanation, treat that as insufficient — this section replaces it.
+
+## Known limits / residual (specific)
+
+- This is the **ops facet** — for parameters use `ArduPilot_Plane_Params`.
+- Wiki HTML origins can leave **thin sections**, **heading/metadata mismatches**, or **nav chrome leftovers** in places; if a hit looks like menu noise, open an issue.
+- Some retrieval questions land on **adjacent** sections (e.g. VTOL/Q modes vs pure fixed-wing) — see the published retrieval demo.
+- Not a substitute for the live docs when you are online and need the latest revision.
 
 ## License / rights
 
-Source material under ArduPilot documentation licenses — verify current terms at ardupilot.org / wiki. This brick is a derived knowledge package for retrieval; redistribute source content under those terms.
+**Upstream:** ArduPilot documentation is generally offered under **Creative Commons Attribution-ShareAlike** (CC BY-SA; confirm current deed on the ArduPilot wiki / docs site).
 
-## Known limits / residual
+**This brick (derived package):** Text content in the ZIP is a **transformed, attributed derivation** of that documentation for offline retrieval. Redistribution of this package should preserve **attribution to the ArduPilot project and original authors** and respect **ShareAlike** for the documentation content. Embeddings and packaging structure are VectorForge brick format, not a claim of ownership over ArduPilot text.
 
-Small residual craft debt may remain (soft). Prefer ops questions here; parameters live in ArduPilot_Plane_Params.
+**Not affiliated with or endorsed by** the ArduPilot project.
 
-## How to use
+## How to use (portable — not VF-only)
 
-1. Unzip `ArduPilot_Plane_portable.zip` (or keep as ZIP if your loader accepts it).
-2. Point **VF Runtime Connect** / Engine `load_kb` at the brick folder (or follow HANDOFF_README.md inside the ZIP).
-3. Search / ask with citations — do not treat answers as certified flight or legal advice.
+1. Download and unzip `ArduPilot_Plane_portable.zip`.
+2. **Any stack that can read the package**, for example:
+   - **Plain:** open the primary `*.md` and search; or index `chunks.jsonl` with any search tool.
+   - **Embeddings:** load `embeddings.npy` + chunk order from `kb.json` / `chunks.jsonl` and cosine-rank (see [PORTABILITY.md](../../PORTABILITY.md)).
+   - **VF Runtime Connect / Engine** if you have it — optional, not required.
+3. Read **Known limits** and **Snapshot** first.
+4. Chat LLM is **not** bundled.
 
-Requires embeddings already in the brick (included). Chat LLM is **not** bundled.
+**Reproducible quality check:** [RETRIEVAL_DEMO_ArduPilot_Plane.md](../../RETRIEVAL_DEMO_ArduPilot_Plane.md) (flagship Plane brick).
 
 
-## Feedback
+## Feedback (one channel)
 
-This brick is a **working knowledge package**, not frozen perfection. If something is wrong, thin, hard to retrieve, or outdated:
+Open an **Issue on this repository** (`vf-brick-library`), title: `<BrickName>: <short problem>`.
 
-- Open an issue on the VectorForge-Pro repo (preferred), or contact the maintainer
-- Say which brick + what you asked + what went wrong
+Include: question asked, what you expected, chunk id if you have one. That is how re-cuts happen.
 
-Over time we expect the library to get **clearer and more trustworthy** as the factory improves and packs are re-cut.
+Do **not** use the private Pro monorepo for public brick feedback.
 

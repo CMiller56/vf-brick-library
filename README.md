@@ -30,7 +30,7 @@ Typical contents:
 - Quality / deficiency notes (we surface problems instead of hiding them)
 - Handoff / original source companions where useful
 
-Bricks are sized to stay human-scale (roughly 500–3k chunks design target). Bigger topics are composed from multiple bricks, not one giant pile.
+Bricks are sized to stay human-scale. **Design guidance** is roughly **hundreds to low thousands of chunks** per brick (not a hard minimum — the flagship Plane ops brick is **335** chunks; the Plane params brick is larger on purpose). Bigger topics are **composed** from multiple bricks (ops vs params vs protocol), not one giant pile.
 
 ---
 
@@ -49,18 +49,25 @@ Bricks are sized to stay human-scale (roughly 500–3k chunks design target). Bi
 
 Each brick folder has `*_portable.zip` + `LIBRARY_CARD.md` (purpose, rights, residual notes, load tips). Machine index: [`catalog.json`](catalog.json).
 
-**Not affiliated with or endorsed by** the ArduPilot, CubePilot, DroneCAN, or UAVCAN projects. Source documentation remains under **upstream licenses** — see each card. These packs are derived retrieval bricks for tinkerers and integrators.
+**Not affiliated with or endorsed by** the ArduPilot, CubePilot, DroneCAN, or UAVCAN projects. Source documentation remains under **upstream licenses** — see each card. ArduPilot wiki-class material is typically **CC BY-SA**; derived bricks should keep **attribution + ShareAlike** on that content. Cards state the brick’s license position explicitly. These packs are derived retrieval bricks for tinkerers and integrators.
 
 This first wave uses only external / open technical sources. Nothing proprietary or unscreened is published here.
 
 ---
 
+
+## Who this is for (positioning)
+
+**Strongest fit:** air-gapped, restricted, or defense-adjacent integrators who need **local, attributed, offline** knowledge with **visible limits** — not another cloud scrape of the live wiki.
+
+**Everyday online hobby use:** the live ArduPilot docs may still win for “latest only.” These bricks win when you need a **frozen, portable, citable package** you can keep, audit, and run without phoning home.
+
 ## How to use a brick
 
 1. Download the `*_portable.zip`
 2. Unzip
-3. Point your tool of choice at it (any local RAG stack, plain Markdown reader, VF Runtime Connect if you have it, etc.)
-4. Read the included craft brief / HANDOFF notes first — they tell you what the brick is good for and where it is intentionally limited
+3. Load it **without requiring VectorForge** — plain Markdown, `chunks.jsonl`, or embeddings cosine rank. Worked notes: [PORTABILITY.md](PORTABILITY.md). VF Runtime is optional.
+4. Read the **LIBRARY_CARD** (snapshot date, named residual, license) before trusting hits.
 
 No account required. No cloud dependency.
 
@@ -76,7 +83,7 @@ I especially want to hear:
 - Where did the extraction honesty (quality notes, figure-shell handling, dual-stream flags, etc.) help — or get in the way?
 - Would you actually keep and maintain a brick like this?
 
-Open an [Issue](../../issues) with the brick name in the title, or just reply on X: [@VectorForgePro](https://x.com/VectorForgePro)
+**One feedback channel for bricks:** open an [Issue](../../issues) on **this** repo with the brick name in the title. (Not the private Pro monorepo.) Optional: reply on X [@VectorForgePro](https://x.com/VectorForgePro).
 
 Honest criticism is more useful than polite praise.
 

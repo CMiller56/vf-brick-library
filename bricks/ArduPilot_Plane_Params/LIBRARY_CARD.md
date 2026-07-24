@@ -1,45 +1,57 @@
 # ArduPilot Plane Parameters
 
-**Brick id (folder):** `ArduPilot_Plane_Params`  
+**Brick id:** `ArduPilot_Plane_Params`  
 **Chunks:** 1781  
-**Package:** `ArduPilot_Plane_Params_portable.zip` (6014 KB)  
-**Export gate waived:** False
+**Package:** `ArduPilot_Plane_Params_portable.zip` (~6014 KB)
 
 ## Purpose
 
-Parameter reference facet for Plane — pair with ops brick, do not treat as full flight manual.
+Parameter reference facet for Plane — name-oriented sections for lookup. Pair with the ops brick; do not treat as the sole flight manual.
 
 ## Audience
 
-Tuners and integrators looking up parameters.
+Tuners and integrators looking up parameters offline.
 
-## Sources
+## Snapshot (critical for this domain)
 
-ArduPilot parameter / reference HTML exports.
+Corpus packaged **2026-07-18** from structured parameter reference MD derived from ArduPilot Plane params HTML. **Not locked to one firmware tag** — always cross-check param defaults and units against the parameter list for your exact Plane version.
+
+## Export / quality gate (what “waived” meant)
+
+Export used the normal portable path. Manufacturing soft residual was **high volume** (structure/craft noise on a multi-thousand-param surface) but **not hard-blocked**. That is expected for this shape of reference, not a silent pass.
+
+Internal Job C soft-gate language is **not** a silent pass. If a card previously said only `Export gate waived: True` without explanation, treat that as insufficient — this section replaces it.
+
+## Known limits / residual (specific)
+
+- Large brick (~1.8k chunks): retrieval is for **param lookup**, not reading cover-to-cover.
+- Structure debt is common: multi-section or thin param stubs from automated HTML→MD conversion.
+- Defaults and availability change by release — snapshot dating above is mandatory reading.
 
 ## License / rights
 
-ArduPilot documentation licenses — see ardupilot.org. Derived retrieval brick only.
+**Upstream:** ArduPilot documentation (typically **CC BY-SA** — verify current terms).
 
-## Known limits / residual
+**This brick:** Derived, attributed parameter reference for offline retrieval. Preserve attribution and ShareAlike obligations on the documentation content. Not affiliated with or endorsed by ArduPilot.
 
-Large parameter surface; many soft structure notes possible. Use for param lookup, not sole flight doctrine.
+## How to use (portable — not VF-only)
 
-## How to use
+1. Download and unzip `ArduPilot_Plane_Params_portable.zip`.
+2. **Any stack that can read the package**, for example:
+   - **Plain:** open the primary `*.md` and search; or index `chunks.jsonl` with any search tool.
+   - **Embeddings:** load `embeddings.npy` + chunk order from `kb.json` / `chunks.jsonl` and cosine-rank (see [PORTABILITY.md](../../PORTABILITY.md)).
+   - **VF Runtime Connect / Engine** if you have it — optional, not required.
+3. Read **Known limits** and **Snapshot** first.
+4. Chat LLM is **not** bundled.
 
-1. Unzip `ArduPilot_Plane_Params_portable.zip` (or keep as ZIP if your loader accepts it).
-2. Point **VF Runtime Connect** / Engine `load_kb` at the brick folder (or follow HANDOFF_README.md inside the ZIP).
-3. Search / ask with citations — do not treat answers as certified flight or legal advice.
-
-Requires embeddings already in the brick (included). Chat LLM is **not** bundled.
+**Reproducible quality check:** [RETRIEVAL_DEMO_ArduPilot_Plane.md](../../RETRIEVAL_DEMO_ArduPilot_Plane.md) (flagship Plane brick).
 
 
-## Feedback
+## Feedback (one channel)
 
-This brick is a **working knowledge package**, not frozen perfection. If something is wrong, thin, hard to retrieve, or outdated:
+Open an **Issue on this repository** (`vf-brick-library`), title: `<BrickName>: <short problem>`.
 
-- Open an issue on the VectorForge-Pro repo (preferred), or contact the maintainer
-- Say which brick + what you asked + what went wrong
+Include: question asked, what you expected, chunk id if you have one. That is how re-cuts happen.
 
-Over time we expect the library to get **clearer and more trustworthy** as the factory improves and packs are re-cut.
+Do **not** use the private Pro monorepo for public brick feedback.
 

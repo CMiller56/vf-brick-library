@@ -1,52 +1,57 @@
 # Advanced Rocket Engines (Haidn / RTO-EN-AVT-150)
 
-**Brick id (folder):** `Advanced_Rockets`  
+**Brick id:** `Advanced_Rockets`  
 **Chunks:** 66  
-**Package:** `Advanced_Rockets_portable.zip` (~1.5 MB)  
-**Export gate waived:** False  
-**Search smoke:** PASS (2026-07-22)
+**Package:** `Advanced_Rockets_portable.zip` (~1460 KB)
 
 ## Purpose
 
-Technical reference brick on **advanced chemical rocket engines** — propulsion basics, cycles, turbomachinery, and related mission context from an educational notes paper.
+Technical reference on advanced chemical rocket engines from educational notes (cycles, turbomachinery, basics).
 
 ## Audience
 
-Aerospace / propulsion engineers, students, and tinkerers studying liquid rocket engines (not flight certification).
+Propulsion engineers and students — not flight certification.
 
-## Sources
+## Snapshot (critical for this domain)
 
-- **Primary:** Haidn, O.J. — *Advanced Rocket Engines* (RTO Educational Notes **RTO-EN-AVT-150**, Paper 6).  
-  Institute of Space Propulsion, DLR (German Aerospace Center).  
-  Cited in-source as available via RTO / NATO STO educational materials (see original PDF attribution).
-- File as ingested: `AdvanceRocketEnginesEN-AVT-150-06.pdf` (~40 pages).
+PDF educational notes **RTO-EN-AVT-150** Paper 6 (Haidn, DLR). Brick built **2026-07-03**. Paper date is the educational-notes series, not a living wiki.
+
+## Export / quality gate (what “waived” meant)
+
+Clean portable export (no hard block). Soft residual: craft flags present.
+
+Internal Job C soft-gate language is **not** a silent pass. If a card previously said only `Export gate waived: True` without explanation, treat that as insufficient — this section replaces it.
+
+## Known limits / residual (specific)
+
+- **Named defect:** `chunk-0039` — `garbled_extraction` / math-font debris (~46% single-character lines). Do not trust that slice for equations without the original PDF.
+- One waived thin/low-extraction stub on a late chunk.
+- Dense figures/equations may be incomplete in plain text (honest PDF limits).
 
 ## License / rights
 
-**Important:** This brick is a **derived retrieval package**, not an official NATO STO / DLR / author publication and **not** a redistribution of the original PDF as the system of record.
+**Upstream:** NATO RTO/STO educational notes **RTO-EN-AVT-150** (Haidn / DLR). Confirm redistribution terms with the rights holder before commercial use.
 
-- Source text is educational material associated with **NATO RTO / STO** publication **RTO-EN-AVT-150**.
-- Confirm current redistribution terms on the **NATO STO / RTO** site (or rights holder) before commercial use or mass republication.
-- Keep the original PDF as system of record when rights allow you to hold it.
-- **Not affiliated with or endorsed by** NATO STO, DLR, or the author.
+**This brick:** Derived retrieval package, not an official NATO/DLR publication. Not affiliated with or endorsed by NATO STO, DLR, or the author.
 
-If you cannot legally host derived educational text in your jurisdiction, do not redistribute this ZIP.
+## How to use (portable — not VF-only)
 
-## Known limits / residual
-
-- Small brick (66 chunks) — depth is paper-scale, not a full textbook.
-- **1 open** high-priority craft flag remains: `garbled_extraction` on a fragment-line region (`chunk-0039`) — dual-stream / math debris style; inspect before trusting that slice.
-- 1 waived thin/low-extraction stub on a late chunk.
-- Equations and dense figures may be incomplete in plain text extract (honest PDF limits).
-- Classification in craft brief may still say “Internal” from build metadata — treat as **technical reference**, not classified material.
-
-## How to use
-
-1. Unzip `Advanced_Rockets_portable.zip` (or load the ZIP if your tooling supports it).
-2. Point **VF Runtime Connect** / Engine `load_kb` at the brick (see `HANDOFF_README.md` inside).
-3. Prefer questions on cycles, turbopumps, propellants, and basics from this paper — ground answers in citations.
+1. Download and unzip `Advanced_Rockets_portable.zip`.
+2. **Any stack that can read the package**, for example:
+   - **Plain:** open the primary `*.md` and search; or index `chunks.jsonl` with any search tool.
+   - **Embeddings:** load `embeddings.npy` + chunk order from `kb.json` / `chunks.jsonl` and cosine-rank (see [PORTABILITY.md](../../PORTABILITY.md)).
+   - **VF Runtime Connect / Engine** if you have it — optional, not required.
+3. Read **Known limits** and **Snapshot** first.
 4. Chat LLM is **not** bundled.
 
-## Feedback
+**Reproducible quality check:** [RETRIEVAL_DEMO_ArduPilot_Plane.md](../../RETRIEVAL_DEMO_ArduPilot_Plane.md) (flagship Plane brick).
 
-Working knowledge package, not frozen perfection. Issues with retrieval, missing sections, or rights concerns welcome via the brick-library issue tracker or VectorForge channels. We re-cut packs as the factory improves.
+
+## Feedback (one channel)
+
+Open an **Issue on this repository** (`vf-brick-library`), title: `<BrickName>: <short problem>`.
+
+Include: question asked, what you expected, chunk id if you have one. That is how re-cuts happen.
+
+Do **not** use the private Pro monorepo for public brick feedback.
+

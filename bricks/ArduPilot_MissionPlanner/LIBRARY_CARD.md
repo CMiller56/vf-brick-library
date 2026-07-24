@@ -1,45 +1,56 @@
 # Mission Planner (GCS)
 
-**Brick id (folder):** `ArduPilot_MissionPlanner`  
+**Brick id:** `ArduPilot_MissionPlanner`  
 **Chunks:** 182  
-**Package:** `ArduPilot_MissionPlanner_portable.zip` (800 KB)  
-**Export gate waived:** False
+**Package:** `ArduPilot_MissionPlanner_portable.zip` (~800 KB)
 
 ## Purpose
 
-Mission Planner ground control station documentation facet.
+Mission Planner ground-control documentation facet (calibration, setup, common workflows).
 
 ## Audience
 
-GCS operators and setup tinkerers.
+GCS operators and setup tinkerers offline.
 
-## Sources
+## Snapshot (critical for this domain)
 
-Mission Planner / ArduPilot GCS documentation.
+Corpus packaged **2026-07-18** from Mission Planner / common ArduPilot GCS MD corpus. UI labels change by MP version.
+
+## Export / quality gate (what “waived” meant)
+
+Soft residual craft debt at export (non-blocking).
+
+Internal Job C soft-gate language is **not** a silent pass. If a card previously said only `Export gate waived: True` without explanation, treat that as insufficient — this section replaces it.
+
+## Known limits / residual (specific)
+
+- Screenshots and menu paths age quickly — prefer concepts over pixel-perfect UI steps.
+- A few soft craft flags may remain from HTML/MD conversion.
 
 ## License / rights
 
-Upstream documentation licenses apply.
+**Upstream:** ArduPilot / Mission Planner documentation terms (typically **CC BY-SA** on wiki-class material — verify).
 
-## Known limits / residual
+**This brick:** Derived offline retrieval package; keep attribution and ShareAlike. Not affiliated with or endorsed by ArduPilot.
 
-Soft residual possible; not a substitute for live UI version notes.
+## How to use (portable — not VF-only)
 
-## How to use
+1. Download and unzip `ArduPilot_MissionPlanner_portable.zip`.
+2. **Any stack that can read the package**, for example:
+   - **Plain:** open the primary `*.md` and search; or index `chunks.jsonl` with any search tool.
+   - **Embeddings:** load `embeddings.npy` + chunk order from `kb.json` / `chunks.jsonl` and cosine-rank (see [PORTABILITY.md](../../PORTABILITY.md)).
+   - **VF Runtime Connect / Engine** if you have it — optional, not required.
+3. Read **Known limits** and **Snapshot** first.
+4. Chat LLM is **not** bundled.
 
-1. Unzip `ArduPilot_MissionPlanner_portable.zip` (or keep as ZIP if your loader accepts it).
-2. Point **VF Runtime Connect** / Engine `load_kb` at the brick folder (or follow HANDOFF_README.md inside the ZIP).
-3. Search / ask with citations — do not treat answers as certified flight or legal advice.
-
-Requires embeddings already in the brick (included). Chat LLM is **not** bundled.
+**Reproducible quality check:** [RETRIEVAL_DEMO_ArduPilot_Plane.md](../../RETRIEVAL_DEMO_ArduPilot_Plane.md) (flagship Plane brick).
 
 
-## Feedback
+## Feedback (one channel)
 
-This brick is a **working knowledge package**, not frozen perfection. If something is wrong, thin, hard to retrieve, or outdated:
+Open an **Issue on this repository** (`vf-brick-library`), title: `<BrickName>: <short problem>`.
 
-- Open an issue on the VectorForge-Pro repo (preferred), or contact the maintainer
-- Say which brick + what you asked + what went wrong
+Include: question asked, what you expected, chunk id if you have one. That is how re-cuts happen.
 
-Over time we expect the library to get **clearer and more trustworthy** as the factory improves and packs are re-cut.
+Do **not** use the private Pro monorepo for public brick feedback.
 

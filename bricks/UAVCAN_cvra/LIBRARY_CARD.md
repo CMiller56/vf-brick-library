@@ -1,45 +1,56 @@
 # UAVCAN (CVRA / legacy facet)
 
-**Brick id (folder):** `UAVCAN_cvra`  
+**Brick id:** `UAVCAN_cvra`  
 **Chunks:** 41  
-**Package:** `UAVCAN_cvra_portable.zip` (209 KB)  
-**Export gate waived:** False
+**Package:** `UAVCAN_cvra_portable.zip` (~209 KB)
 
 ## Purpose
 
-UAVCAN-oriented DSDL / protocol facet from CVRA-style corpus.
+Small UAVCAN-oriented DSDL / protocol facet from CVRA-style materials.
 
 ## Audience
 
 Protocol developers.
 
-## Sources
+## Snapshot (critical for this domain)
 
-UAVCAN / CVRA public materials as packaged in build scripts.
+Corpus packaged **2026-07-18** from structured UAVCAN/CVRA MD. Legacy-oriented; not full UAVCAN v1 universe.
+
+## Export / quality gate (what “waived” meant)
+
+Soft residual (non-blocking).
+
+Internal Job C soft-gate language is **not** a silent pass. If a card previously said only `Export gate waived: True` without explanation, treat that as insufficient — this section replaces it.
+
+## Known limits / residual (specific)
+
+- Small brick — incomplete vs modern UAVCAN/DroneCAN full surface.
+- Prefer DroneCAN brick for current bus work unless you know you need this facet.
 
 ## License / rights
 
-Upstream licenses apply; verify before commercial redistribution.
+**Upstream:** UAVCAN / CVRA materials under their respective licenses — verify.
 
-## Known limits / residual
+**This brick:** Derived package; attribution required. Not an official UAVCAN distribution.
 
-Small brick; specialty protocol surface.
+## How to use (portable — not VF-only)
 
-## How to use
+1. Download and unzip `UAVCAN_cvra_portable.zip`.
+2. **Any stack that can read the package**, for example:
+   - **Plain:** open the primary `*.md` and search; or index `chunks.jsonl` with any search tool.
+   - **Embeddings:** load `embeddings.npy` + chunk order from `kb.json` / `chunks.jsonl` and cosine-rank (see [PORTABILITY.md](../../PORTABILITY.md)).
+   - **VF Runtime Connect / Engine** if you have it — optional, not required.
+3. Read **Known limits** and **Snapshot** first.
+4. Chat LLM is **not** bundled.
 
-1. Unzip `UAVCAN_cvra_portable.zip` (or keep as ZIP if your loader accepts it).
-2. Point **VF Runtime Connect** / Engine `load_kb` at the brick folder (or follow HANDOFF_README.md inside the ZIP).
-3. Search / ask with citations — do not treat answers as certified flight or legal advice.
-
-Requires embeddings already in the brick (included). Chat LLM is **not** bundled.
+**Reproducible quality check:** [RETRIEVAL_DEMO_ArduPilot_Plane.md](../../RETRIEVAL_DEMO_ArduPilot_Plane.md) (flagship Plane brick).
 
 
-## Feedback
+## Feedback (one channel)
 
-This brick is a **working knowledge package**, not frozen perfection. If something is wrong, thin, hard to retrieve, or outdated:
+Open an **Issue on this repository** (`vf-brick-library`), title: `<BrickName>: <short problem>`.
 
-- Open an issue on the VectorForge-Pro repo (preferred), or contact the maintainer
-- Say which brick + what you asked + what went wrong
+Include: question asked, what you expected, chunk id if you have one. That is how re-cuts happen.
 
-Over time we expect the library to get **clearer and more trustworthy** as the factory improves and packs are re-cut.
+Do **not** use the private Pro monorepo for public brick feedback.
 
