@@ -7,6 +7,15 @@ Public collection of **portable knowledge bricks** — bounded, self-contained p
 These are not unbounded RAG dumps.  
 Each brick is a finished, handoffable unit: rich Markdown + machine sidecars + embeddings + craft notes, ready for local use, air-gapped environments, or any tool that can read the package.
 
+## Look, don’t trust me
+
+The highest-leverage way to judge this library is not the README — it is a **published retrieval demo**.
+
+**[RETRIEVAL_DEMO_ArduPilot_Plane.md](RETRIEVAL_DEMO_ArduPilot_Plane.md)** — **20 real questions** against the published `ArduPilot_Plane` brick: top-3 hits with **cosine scores**, **chunk ids**, **headings**, and **source excerpts** (not LLM-invented answers). Machine-readable twin: [`demos/ardupilot_plane_eval.json`](demos/ardupilot_plane_eval.json).
+
+Ten minutes of reading beats any claim that “bricks retrieve well.” If a hit looks wrong, open an issue.
+
+
 ---
 
 ## What is a knowledge brick?
