@@ -7,6 +7,15 @@ Public collection of **portable knowledge bricks** — bounded, self-contained p
 These are not unbounded RAG dumps.  
 Each brick is a finished, handoffable unit: rich Markdown + machine sidecars + embeddings + craft notes, ready for local use, air-gapped environments, or any tool that can read the package.
 
+
+## Hard corpus on the desk
+
+![VectorForge Pro timeline — Skolnik_Radar (Introduction to Radar Systems)](docs/skolnik-desk-hard-corpus.png)
+
+**Skolnik-class radar PDF on the Pro desk** (~2.8k chunks): timeline, quality rings on hollow/garble clips, problem strip, and chunk inspector on real extract mess (dual-stream / debris still visible in places).  
+
+We **dogfood commercial-class difficulty privately** for stress and screenshots. We **do not republish commercial textbooks** as downloadable bricks. For a **rights-clear, measurable** demo you can re-run yourself, see **[Look, don’t trust me](#look-dont-trust-me)** below (ArduPilot Plane, 20 questions + citations).
+
 ## Look, don’t trust me
 
 The highest-leverage way to judge this library is not the README — it is a **published retrieval demo**.
