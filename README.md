@@ -73,10 +73,13 @@ This first wave uses only external / open technical sources. Nothing proprietary
 
 ## How to use a brick
 
+**→ Full path:** [GETTING_STARTED.md](GETTING_STARTED.md) (5–15 minutes)
+
 1. Download the `*_portable.zip`
 2. Unzip
 3. Load it **without requiring VectorForge** — plain Markdown, `chunks.jsonl`, or embeddings cosine rank. Worked notes: [PORTABILITY.md](PORTABILITY.md). VF Runtime is optional.
 4. Read the **LIBRARY_CARD** (snapshot date, named residual, license) before trusting hits.
+5. When ranking semantically, **skip** chunks with `exclude_from_rag` / `muted` (figure-shell debris).
 
 No account required. No cloud dependency.
 
@@ -92,7 +95,7 @@ I especially want to hear:
 - Where did the extraction honesty (quality notes, figure-shell handling, dual-stream flags, etc.) help — or get in the way?
 - Would you actually keep and maintain a brick like this?
 
-**One feedback channel for bricks:** open an [Issue](../../issues) on **this** repo with the brick name in the title. (Not the private Pro monorepo.) Optional: reply on X [@VectorForgePro](https://x.com/VectorForgePro).
+**One feedback channel for bricks:** open an [Issue](../../issues) on **this** repo with the brick name in the title — prefer the **Brick feedback** issue template (query + expected vs got + loader). Not the private Pro monorepo. Optional: reply on X [@VectorForgePro](https://x.com/VectorForgePro).
 
 Honest criticism is more useful than polite praise.
 
@@ -112,13 +115,17 @@ Honest criticism is more useful than polite praise.
 ```
 vf-brick-library/
 ├── README.md                 ← you are here
+├── GETTING_STARTED.md        ← drop-in path (start here)
+├── PORTABILITY.md            ← load without VectorForge
+├── RETRIEVAL_DEMO_*.md       ← published Q&A evidence
 ├── catalog.json              ← machine-readable index
+├── demos/                    ← eval JSON twins
 ├── bricks/
 │   ├── <Brick_Name>/
 │   │   ├── <Brick_Name>_portable.zip
 │   │   └── LIBRARY_CARD.md
 │   └── ...
-└── (optional feedback notes)
+└── .github/ISSUE_TEMPLATE/   ← brick feedback form
 ```
 
 ---

@@ -1,71 +1,116 @@
 {
-  "version": 1,
-  "updated": "2026-07-22",
+  "version": 2,
+  "updated": "2026-07-23",
   "library": "vf-brick-library",
+  "url": "https://github.com/CMiller56/vf-brick-library",
+  "unit": "*_portable.zip",
+  "getting_started": "GETTING_STARTED.md",
+  "portability": "PORTABILITY.md",
+  "retrieval_demo": "RETRIEVAL_DEMO_ArduPilot_Plane.md",
   "bricks": [
     {
       "name": "Advanced_Rockets",
       "title": "Advanced Rocket Engines (Haidn / RTO-EN-AVT-150)",
+      "chunks": 66,
       "zip": "bricks/Advanced_Rockets/Advanced_Rockets_portable.zip",
-      "card": "bricks/Advanced_Rockets/LIBRARY_CARD.md",
       "size_bytes": 1495393,
-      "family": "aerospace"
+      "card": "bricks/Advanced_Rockets/LIBRARY_CARD.md",
+      "family": "aerospace",
+      "rights_class": "educational_third_party",
+      "residual_one_liner": "Paper-scale (66 chunks); 1 residual garble region; math/figures thin in plain text",
+      "search_smoke": "PASS",
+      "has_handoff": true
     },
     {
       "name": "ArduPilot_MAVLink",
       "title": "MAVLink (ArduPilot-oriented)",
+      "chunks": 310,
       "zip": "bricks/ArduPilot_MAVLink/ArduPilot_MAVLink_portable.zip",
-      "card": "bricks/ArduPilot_MAVLink/LIBRARY_CARD.md",
       "size_bytes": 1243981,
-      "family": "ardupilot"
+      "card": "bricks/ArduPilot_MAVLink/LIBRARY_CARD.md",
+      "family": "ardupilot",
+      "rights_class": "upstream",
+      "residual_one_liner": "Protocol facet; soft residual possible",
+      "search_smoke": null,
+      "has_handoff": true
     },
     {
       "name": "ArduPilot_MissionPlanner",
       "title": "Mission Planner (GCS)",
+      "chunks": 182,
       "zip": "bricks/ArduPilot_MissionPlanner/ArduPilot_MissionPlanner_portable.zip",
-      "card": "bricks/ArduPilot_MissionPlanner/LIBRARY_CARD.md",
       "size_bytes": 819318,
-      "family": "ardupilot"
+      "card": "bricks/ArduPilot_MissionPlanner/LIBRARY_CARD.md",
+      "family": "ardupilot",
+      "rights_class": "upstream",
+      "residual_one_liner": "GCS facet; soft residual possible",
+      "search_smoke": null,
+      "has_handoff": true
     },
     {
       "name": "ArduPilot_Plane",
       "title": "ArduPilot Plane (operations)",
+      "chunks": 335,
       "zip": "bricks/ArduPilot_Plane/ArduPilot_Plane_portable.zip",
-      "card": "bricks/ArduPilot_Plane/LIBRARY_CARD.md",
       "size_bytes": 1507497,
-      "family": "ardupilot"
+      "card": "bricks/ArduPilot_Plane/LIBRARY_CARD.md",
+      "family": "ardupilot",
+      "rights_class": "upstream",
+      "residual_one_liner": "Soft residual craft may remain; ops-focused (params live in Plane_Params)",
+      "search_smoke": "PASS (see public retrieval demo)",
+      "has_handoff": true
     },
     {
       "name": "ArduPilot_Plane_Params",
       "title": "ArduPilot Plane Parameters",
+      "chunks": 1781,
       "zip": "bricks/ArduPilot_Plane_Params/ArduPilot_Plane_Params_portable.zip",
-      "card": "bricks/ArduPilot_Plane_Params/LIBRARY_CARD.md",
       "size_bytes": 6158721,
-      "family": "ardupilot"
+      "card": "bricks/ArduPilot_Plane_Params/LIBRARY_CARD.md",
+      "family": "ardupilot",
+      "rights_class": "upstream",
+      "residual_one_liner": "Large soft residual count by design (param table density) \u2014 honesty card required",
+      "search_smoke": null,
+      "has_handoff": true
     },
     {
       "name": "CubePilot_FC",
       "title": "CubePilot flight controllers",
+      "chunks": 258,
       "zip": "bricks/CubePilot_FC/CubePilot_FC_portable.zip",
-      "card": "bricks/CubePilot_FC/LIBRARY_CARD.md",
       "size_bytes": 1103397,
-      "family": "ardupilot"
+      "card": "bricks/CubePilot_FC/LIBRARY_CARD.md",
+      "family": "ardupilot",
+      "rights_class": "upstream",
+      "residual_one_liner": "Hardware docs facet; soft residual possible",
+      "search_smoke": null,
+      "has_handoff": true
     },
     {
       "name": "DroneCAN",
       "title": "DroneCAN",
+      "chunks": 182,
       "zip": "bricks/DroneCAN/DroneCAN_portable.zip",
-      "card": "bricks/DroneCAN/LIBRARY_CARD.md",
       "size_bytes": 798343,
-      "family": "ardupilot"
+      "card": "bricks/DroneCAN/LIBRARY_CARD.md",
+      "family": "ardupilot",
+      "rights_class": "upstream",
+      "residual_one_liner": "Protocol facet; soft residual possible",
+      "search_smoke": null,
+      "has_handoff": true
     },
     {
       "name": "UAVCAN_cvra",
       "title": "UAVCAN (CVRA / legacy facet)",
+      "chunks": 41,
       "zip": "bricks/UAVCAN_cvra/UAVCAN_cvra_portable.zip",
-      "card": "bricks/UAVCAN_cvra/LIBRARY_CARD.md",
       "size_bytes": 214548,
-      "family": "ardupilot"
+      "card": "bricks/UAVCAN_cvra/LIBRARY_CARD.md",
+      "family": "ardupilot",
+      "rights_class": "upstream",
+      "residual_one_liner": "Small legacy facet (41 chunks)",
+      "search_smoke": null,
+      "has_handoff": true
     }
   ]
 }
