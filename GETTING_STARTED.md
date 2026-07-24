@@ -69,7 +69,7 @@ Open an [Issue](https://github.com/CMiller56/vf-brick-library/issues) with:
 
 Template: [`.github/ISSUE_TEMPLATE/brick_feedback.md`](.github/ISSUE_TEMPLATE/brick_feedback.md)
 
-Honest criticism beats polite praise. We re-cut packs as the factory improves.
+Honest criticism beats polite praise. Packs get re-cut as the factory improves.
 
 ## Shelf map (ArduPilot family)
 
@@ -84,6 +84,6 @@ DroneCAN / UAVCAN_cvra   ← bus protocols
 
 Compose multiple bricks for a vehicle stack — one zip is not the entire wiki.
 
-## What we do *not* publish here
+## What is *not* published here
 
-Commercial textbooks (e.g. radar handbooks dogfooded on the desk) and customer bricks stay private. The front-page hard-corpus screenshot shows **difficulty**, not a downloadable commercial book.
+Commercial textbooks (e.g. radar handbooks dogfooded privately for stress) and customer bricks stay private. The front-page hard-corpus screenshot shows **difficulty**, not a downloadable commercial book.

@@ -2,7 +2,7 @@
 
 Public collection of **portable knowledge bricks** — bounded, self-contained packages of technical knowledge made with [VectorForge Pro](https://x.com/VectorForgePro).
 
-**Why these bricks exist:** we publish KBs that **demonstrate the range of VF Pro capabilities** — different source shapes (technical PDF papers, multi-site wiki/HTML ops docs, large parameter references, protocol XML, GitBook-style hardware manuals) turned into honest, drop-in packages. The library is a living sample set, not a product dump of the workbench itself.
+**Why these bricks exist:** I publish KBs that **demonstrate the range of VF Pro capabilities** — different source shapes (technical PDF papers, multi-site wiki/HTML ops docs, large parameter references, protocol XML, GitBook-style hardware manuals) turned into honest, drop-in packages. This library is a living sample set from a **solo builder**, not a company product dump or community project.
 
 These are not unbounded RAG dumps.  
 Each brick is a finished, handoffable unit: rich Markdown + machine sidecars + embeddings + craft notes, ready for local use, air-gapped environments, or any tool that can read the package.
@@ -14,7 +14,7 @@ Each brick is a finished, handoffable unit: rich Markdown + machine sidecars + e
 
 **Skolnik-class radar PDF on the Pro desk** (~2.8k chunks): timeline, quality rings on hollow/garble clips, problem strip, and chunk inspector on real extract mess (dual-stream / debris still visible in places).  
 
-We **dogfood commercial-class difficulty privately** for stress and screenshots. We **do not republish commercial textbooks** as downloadable bricks. For a **rights-clear, measurable** demo you can re-run yourself, see **[Look, don’t trust me](#look-dont-trust-me)** below (ArduPilot Plane, 20 questions + citations).
+I **dogfood commercial-class difficulty privately** for stress and screenshots. I **do not republish commercial textbooks** as downloadable bricks. For a **rights-clear, measurable** demo you can re-run yourself, see **[Look, don’t trust me](#look-dont-trust-me)** below (ArduPilot Plane, 20 questions + citations).
 
 ## Look, don’t trust me
 
@@ -36,7 +36,7 @@ Typical contents:
 - `kb.json` + chunk indexes
 - Embeddings + provenance
 - Craft brief (what the brick is for, known limits, answer policy)
-- Quality / deficiency notes (we surface problems instead of hiding them)
+- Quality / deficiency notes (problems stay visible instead of hidden)
 - Handoff / original source companions where useful
 
 Bricks are sized to stay human-scale. **Design guidance** is roughly **hundreds to low thousands of chunks** per brick (not a hard minimum — the flagship Plane ops brick is **335** chunks; the Plane params brick is larger on purpose). Bigger topics are **composed** from multiple bricks (ops vs params vs protocol), not one giant pile.
@@ -103,7 +103,7 @@ Honest criticism is more useful than polite praise.
 
 ## Design stance (short version)
 
-- **Problems stay visible.** We do not silently invent fixes for content we did not create.
+- **Problems stay visible.** I do not silently invent fixes for content I did not create.
 - **Extraction limits are expected.** Real PDFs, manuals, and decks have hollow pages, dual-stream debris, and figure shells. The brick records them.
 - **Local-first and air-gap capable.** The package should work without phoning home.
 - **Non-data-scientists should be able to manufacture and maintain these.** That is the whole point of the workbench.
@@ -136,7 +136,9 @@ VectorForge Pro is a local-first timeline-native workbench for turning heterogen
 
 It treats knowledge bases like long-form media projects: non-destructive editing, quality orchestration, craft briefs, and honest extract loops instead of green-smoke-on-empty-books.
 
-**This repository is the public gallery of outputs** — bricks that show what the factory can produce across domains and file types. It is not the Pro application, Engine source, or internal product documentation.
+**This repository is the public gallery of outputs** — bricks that show what VF Pro can produce across domains and file types. It is not the Pro application, Engine source, or internal product documentation.
+
+VectorForge is built and published by **one person** (not a community team or corporate product org). Feedback is welcome; there is no “we” behind the curtain.
 
 - X: [@VectorForgePro](https://x.com/VectorForgePro)
 - Builder: [@CMiller111111](https://x.com/CMiller111111)
