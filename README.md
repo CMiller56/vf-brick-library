@@ -138,10 +138,13 @@ It treats knowledge bases like long-form media projects: non-destructive editing
 
 **This repository is the public gallery of outputs** — bricks that show what VF Pro can produce across domains and file types. It is not the Pro application, Engine source, or internal product documentation.
 
-VectorForge is built and published by **one person** (not a community team or corporate product org). Feedback is welcome; there is no “we” behind the curtain.
+**Who builds this:** one human operator — not a community of developers and not a company product team. Feedback is welcome.
+
+**Credit where it is due:** VectorForge would not exist without **Grok** (xAI) across successive versions of the model and tooling. Design, judgment, and the product are mine; a great deal of the build labor and iteration has been in collaboration with Grok. Full credit for that partnership — without implying a human engineering org behind the curtain.
 
 - X: [@VectorForgePro](https://x.com/VectorForgePro)
 - Builder: [@CMiller111111](https://x.com/CMiller111111)
+- Grok / xAI: [x.ai](https://x.ai)
 
 ---
 
